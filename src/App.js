@@ -6,6 +6,7 @@ import PhotoStore, { CartPage } from './components/PhotoStore';
 export default function App() {
   return (
     <BrowserRouter
+      basename={process.env.PUBLIC_URL}
       future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
     >
       <Routes>

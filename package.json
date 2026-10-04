@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mariammakhlof.github.io/Shop-space",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.0",
     "@reduxjs/toolkit": "^2.3.0",

@@ -20,3 +20,5 @@ Build the production files with:
 ```bash
 npm run build
 ```
+
+GitHub Pages deploys automatically when changes are pushed to `main`. Once the Actions run succeeds, the site is available at <https://mariammakhlof.github.io/Shop-space/>.
