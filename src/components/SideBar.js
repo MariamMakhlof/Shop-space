@@ -62,6 +62,7 @@ export default function SideBar() {
   function closeSidebarOnMobile() {
     if (window.matchMedia('(max-width: 620px)').matches) {
       setIsExpanded(false);
+      setIsCategoriesExpanded(false);
     }
   }
 

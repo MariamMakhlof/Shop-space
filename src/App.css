@@ -37,3 +37,24 @@ body {
   background: var(--app-background);
   transition: background-color .2s ease;
 }
+
+@media (max-width: 620px) {
+  .app-layout { flex-direction: column; }
+
+  .app-main {
+    order: 1;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    scrollbar-gutter: auto;
+  }
+
+  .wrapper,
+  .wrapper.sidebar-expanded {
+    order: 2;
+    flex: 0 0 62px;
+    width: 100%;
+    min-width: 0;
+    height: 62px;
+  }
+}
