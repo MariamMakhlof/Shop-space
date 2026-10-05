@@ -87,7 +87,7 @@ export function CartPage() {
     <section className="store-page">
       <div className="store-heading">
         <div>
-          <p className="store-eyebrow">YOUR SELECTION</p>
+          <p className="store-style">YOUR SELECTION</p>
           <h1>Your cart</h1>
         </div>
         <Link className="store-back-link" to="/">
@@ -114,7 +114,7 @@ export function CartPage() {
                 <img src={product.thumbnail} alt={product.title} />
 
                 <div className="cart-item-info">
-                  <span className="store-eyebrow">
+                  <span className="store-style">
                     {product.brand || product.category}
                   </span>
                   <h2>{product.title}</h2>
@@ -297,7 +297,7 @@ export default function PhotoStore() {
 
       <div className="collection-heading">
         <div>
-          <p className="store-eyebrow">THE COLLECTION</p>
+          <p className="store-style">THE COLLECTION</p>
           <h2>Popular products</h2>
         </div>
 

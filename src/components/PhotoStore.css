@@ -142,7 +142,7 @@
   letter-spacing: -.5px;
 }
 
-.store-eyebrow {
+.store-style {
   margin: 15px 0 9px;
   color: var(--accent);
   font-size: 10px;
@@ -504,7 +504,7 @@
   font-size: 12px;
 }
 
-.cart-item-info .store-eyebrow { font-size: 9px; }
+.cart-item-info .store-style { font-size: 9px; }
 .cart-line-total { font-size: 14px; white-space: nowrap; }
 
 .remove-button {
