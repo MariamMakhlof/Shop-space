@@ -12,7 +12,7 @@ import {
 import { setViewOption } from './redux/productSlice';
 import './PhotoStore.css';
 
-const PRODUCTS_API_URL = 'https://dummyjson.com/products?limit=30';
+const PRODUCTS_API_URL = 'https://dummyjson.com/products?limit=100';
 
 const currency = new Intl.NumberFormat('en-US', {
   style: 'currency',
