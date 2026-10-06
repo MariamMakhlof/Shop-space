@@ -9,7 +9,7 @@ import {
   selectTotalAmount,
   selectTotalQuantity,
 } from './redux/cartSlice';
-import { setViewOption } from './redux/productSlice';
+import { setViewMode } from './redux/viewSlice';
 import './PhotoStore.css';
 
 const PRODUCTS_API_URL = 'https://dummyjson.com/products?limit=100';
@@ -178,7 +178,7 @@ export default function PhotoStore() {
   const cart = useSelector(selectCartItems);
   const totalQuantity = useSelector(selectTotalQuantity);
   const totalAmount = useSelector(selectTotalAmount);
-  const viewOption = useSelector((state) => state.products.viewOption);
+  const viewMode = useSelector((state) => state.view.mode);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -335,9 +335,9 @@ export default function PhotoStore() {
         <div className="view-switch" role="group" aria-label="Product layout">
           <button
             type="button"
-            className={viewOption === 'grid' ? 'view-button selected' : 'view-button'}
-            onClick={() => dispatch(setViewOption('grid'))}
-            aria-pressed={viewOption === 'grid'}
+            className={viewMode === 'grid' ? 'view-button selected' : 'view-button'}
+            onClick={() => dispatch(setViewMode('grid'))}
+            aria-pressed={viewMode === 'grid'}
             aria-label="Grid view"
             title="Grid view"
           >
@@ -346,9 +346,9 @@ export default function PhotoStore() {
           </button>
           <button
             type="button"
-            className={viewOption === 'list' ? 'view-button selected' : 'view-button'}
-            onClick={() => dispatch(setViewOption('list'))}
-            aria-pressed={viewOption === 'list'}
+            className={viewMode === 'list' ? 'view-button selected' : 'view-button'}
+            onClick={() => dispatch(setViewMode('list'))}
+            aria-pressed={viewMode === 'list'}
             aria-label="List view"
             title="List view"
           >
@@ -378,7 +378,7 @@ export default function PhotoStore() {
       )}
 
       {!loading && !error && filteredProducts.length > 0 && (
-        <div className={`photo-grid ${viewOption === 'list' ? 'list-view' : 'grid-view'}`}>
+        <div className={`photo-grid ${viewMode === 'list' ? 'list-view' : 'grid-view'}`}>
           {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
